@@ -2,22 +2,14 @@
 * { 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 body{
-    min-height: 100vh; /*Min page height based on html*/         
-    color: black;
-    background-color: white;
-    border: 10px solid red;    
+    min-height: 100vh; /*Min page height based on html*/                     
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-container{
-    display: flex;
-    flex-direction: column;            
+    flex-direction: column;
+    flex: 1;        
 }
 
 
@@ -25,13 +17,20 @@ body{
 .header-container{
     display: flex;
     flex-direction: row;
-    justify-content: center; /*ALIGN HORIZONTAL*/
-    gap: 400px;    
+    justify-content: space-evenly;  
+    align-items: center;      
+    flex: 1;                
 }
 
-.header-container .left{}
+.header-container .left{
+    display: flex;
+    align-items: center;
+}
 
-.header-container .right{}
+.header-container .right{
+    display: flex;
+    align-items: center;
+}
 
 .header-container .right ul{
     display: flex;
@@ -48,24 +47,24 @@ body{
 .signup-container-1{    
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 140px;    
+    justify-content: space-evenly;
+    align-items: center;    
+    flex: 1;    
 }
 
 .signup-container-1 .left{}
 
 .signup-container-1 .right{      
     display: flex;
-    align-items: flex-end;/*ALIGN VERTICAL*/    
+    align-items: center;/*ALIGN VERTICAL*/    
 }
 
 /*CONTAINER 3 - RANDINFO*/
 .randinfo-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;    
-    margin-left: 140px;
-    margin-right: 140px;    
+    justify-content: space-evenly;        
+    flex: 1;   
 }
 
 .randinfo-container .upper{
@@ -77,46 +76,147 @@ body{
 .randinfo-container .lower{
    display: flex;
    flex-direction: row;   
-   justify-content: center;
-   text-align: center;
+   justify-content: space-around;
+   text-align: center;   
 }
 
 /*CONTAINER 4 - QUOTATION*/
 .quotation-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 260px;
-    margin-right: 260px;
+    justify-content: space-around;    
+    flex: 1;
 }
 
 .quotation-container .quote{    
-    text-align: start;    
+    text-align: center;    
 }
 
 .quotation-container .reference{
-    text-align: end;
+    text-align: end;/*can't align properly*/    
 }
 
 /*CONTAINER 5 - SIGNUP 2*/
 .signup-container-2{
     display: flex;
     flex-direction: row;    
-    justify-content: space-between;
-    margin-left: 300px;
-    margin-right: 300px;
+    justify-content: space-evenly;    
+    flex: 1;
+    margin: 100px;
 }
- .signup-container-2 .left{
-
- }
-
- .signup-container-2  .right{     
-
- }
+ .signup-container-2 .left,
+ .signup-container-2 .right{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ } 
 
  /*CONTAINER 6 - FOOTER*/
  .footer{
      display: flex;
      justify-content: center;
+     align-items: center;
+     flex: 1;     
+     width: 100%;
  }
 
+
+
+ /*************************STYLING**************************/
+ .header-container,
+ .signup-container-1,
+ .footer{
+     background-color: #1F2937;
+     color: white;
+ }
+
+ .header-container .left p{
+     font-size: 24px;
+     color: #F9FAF8;
+     font-weight: 700;
+ }
+
+ .header-container .right ul a,
+ .signup-container-1 .left .subtext{
+    font-size: 18px;
+    color: #E5E7EB;
+ }
+.signup-container-1 .left .header {
+    font-size: 48px;
+    font-weight: extra-bold;
+    color: #F9FAF8;
+}
+
+.signup-container-1 .left button{
+    background-color: #3882F6;
+    color: white;    
+    font-weight: 600;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;/*ROUNDED CORNERS*/
+}
+
+.signup-container-1 .left button:hover,
+.footer .right button{
+    cursor: pointer;
+    background-color: #3373db;    
+}
+
+ .signup-container-1 .right{
+    
+    background-color: #727881;
+    padding: 50px;
+ }
+
+ .randinfo-container .lower .item-1 img,
+ .randinfo-container .lower .item-2 img,
+ .randinfo-container .lower .item-3 img,
+ .randinfo-container .lower .item-4 img{
+     width: 50%;
+     height: 100%;
+     border-radius: 20px;
+ }
+
+ .quotation-container{
+     background-color: #E5E7EB;
+     color: #1F2937;     
+ }
+
+ .quotation-container .quote{
+     font-size: 36px;
+     font-style: italic;
+
+ }
+
+ .quotation-container .reference{
+     font-weight: 700;
+ }
+
+ .signup-container-2{
+     background-color: #3882F6;
+     color: white;
+ }
+
+ .signup-container-2 .left p{
+     font-weight: 700;
+ }
+
+ .signup-container-2 button{
+    background-color: #3882F6;
+    color: white;    
+    font-weight: 600;    
+    border: 2px solid white;    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;/*ROUNDED CORNERS*/
+ }
+
+ .signup-container-2 button:hover{
+    cursor: pointer;
+    background-color: #3373db;  
+ }
