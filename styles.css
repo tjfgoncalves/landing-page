@@ -1,0 +1,122 @@
+/*CSS reset*/
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh; /*Min page height based on html*/         
+    color: black;
+    background-color: white;
+    border: 10px solid red;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;            
+}
+
+
+/*CONTAINER 1 - HEADER*/
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*ALIGN HORIZONTAL*/
+    gap: 400px;    
+}
+
+.header-container .left{}
+
+.header-container .right{}
+
+.header-container .right ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;           
+    list-style: none; /*REMOVES BULLET POINTS*/
+}
+
+.header-container .right ul a{
+    text-decoration: none; /*REMOVES LINK UNDERLINE*/    
+}
+
+/*CONTAINER 2 - SIGNUP 1*/
+.signup-container-1{    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 140px;    
+}
+
+.signup-container-1 .left{}
+
+.signup-container-1 .right{      
+    display: flex;
+    align-items: flex-end;/*ALIGN VERTICAL*/    
+}
+
+/*CONTAINER 3 - RANDINFO*/
+.randinfo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin-left: 140px;
+    margin-right: 140px;    
+}
+
+.randinfo-container .upper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
+.randinfo-container .lower{
+   display: flex;
+   flex-direction: row;   
+   justify-content: center;
+   text-align: center;
+}
+
+/*CONTAINER 4 - QUOTATION*/
+.quotation-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 260px;
+    margin-right: 260px;
+}
+
+.quotation-container .quote{    
+    text-align: start;    
+}
+
+.quotation-container .reference{
+    text-align: end;
+}
+
+/*CONTAINER 5 - SIGNUP 2*/
+.signup-container-2{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+ .signup-container-2 .left{
+
+ }
+
+ .signup-container-2  .right{     
+
+ }
+
+ /*CONTAINER 6 - FOOTER*/
+ .footer{
+     display: flex;
+     justify-content: center;
+ }
+
